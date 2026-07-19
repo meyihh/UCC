@@ -1,0 +1,1130 @@
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.main-container{
+  width:100%;
+
+  padding:35px 40px 50px;
+
+  background:#ecedec;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+  width:100%;
+}
+
+.hero-content{
+  width:100%;
+}
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.top-section{
+  width:100%;
+
+  display:flex;
+  align-items:flex-start;
+
+  gap:30px;
+}
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.carousel{
+  flex:1;
+
+  border-radius:24px;
+
+  overflow:hidden;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.18);
+
+  background:#ffffff;
+}
+
+/* =========================
+   CAROUSEL INNER
+========================= */
+
+.carousel-inner{
+  border-radius:24px;
+}
+
+/* =========================
+   CAROUSEL IMAGE
+========================= */
+
+.carousel-item img{
+  width:100%;
+
+  height:560px;
+
+  object-fit:cover;
+
+  transition:0.4s ease;
+}
+
+/* =========================
+   CONTROLS
+========================= */
+
+.carousel-control-prev,
+.carousel-control-next{
+  width:8%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  width:3rem;
+  height:3rem;
+
+  border-radius:50%;
+
+  background-color:rgba(0,0,0,0.35);
+
+  padding:25px;
+
+  backdrop-filter:blur(4px);
+}
+
+/* =========================
+   INDICATORS
+========================= */
+
+.carousel-indicators{
+  margin-bottom:18px;
+}
+
+.carousel-indicators button{
+  width:12px !important;
+  height:12px !important;
+
+  border-radius:50%;
+
+  border:none !important;
+
+  background:#ffffff !important;
+
+  opacity:0.5;
+}
+
+.carousel-indicators .active{
+  opacity:1;
+
+  transform:scale(1.15);
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.carousel:hover .carousel-item img{
+  transform:scale(1.02);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+  .main-container{
+    padding:30px;
+  }
+
+  .carousel-item img{
+    height:500px;
+  }
+
+}
+
+@media(max-width:992px){
+
+  .top-section{
+    flex-direction:column;
+  }
+
+  .carousel{
+    width:100%;
+  }
+
+  .carousel-item img{
+    height:430px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .main-container{
+    padding:20px 15px 40px;
+  }
+
+  .carousel{
+    border-radius:18px;
+  }
+
+  .carousel-inner{
+    border-radius:18px;
+  }
+
+  .carousel-item img{
+    height:260px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon{
+    width:2.3rem;
+    height:2.3rem;
+
+    padding:18px;
+  }
+
+  .carousel-indicators{
+    margin-bottom:10px;
+  }
+
+}
+/* =========================
+   PORTAL CONTAINER
+========================= */
+
+.portal-container{
+  width:360px;
+
+  min-width:360px;
+  max-height:560px;
+
+  background:linear-gradient(180deg,#033814,#055122);
+
+  border-radius:24px;
+
+  padding:25px 22px;
+
+  overflow-y:auto;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.20);
+
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.portal-container::-webkit-scrollbar{
+  width:8px;
+}
+
+.portal-container::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+.portal-container::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,0.25);
+
+  border-radius:20px;
+}
+
+/* =========================
+   PORTAL TITLE
+========================= */
+
+.portal-title{
+  color:#ffffff;
+
+  text-align:center;
+
+  font-size:2rem;
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  margin-bottom:25px;
+}
+
+/* =========================
+   PORTAL LINK
+========================= */
+
+.portal-link{
+  width:100%;
+
+  display:flex;
+  align-items:center;
+
+  gap:18px;
+
+  text-decoration:none;
+
+  background:#ffffff;
+
+  border-radius:18px;
+
+  padding:16px;
+
+  margin-bottom:18px;
+
+  transition:0.3s ease;
+
+  border:1px solid rgba(0,0,0,0.05);
+
+  box-shadow:0 6px 16px rgba(0,0,0,0.10);
+}
+
+/* =========================
+   HOVER EFFECT
+========================= */
+
+.portal-link:hover{
+  transform:translateY(-4px);
+
+  background:#2fa85a;
+}
+
+/* =========================
+   PORTAL LOGO
+========================= */
+
+.portal-logo{
+  width:72px;
+  height:72px;
+
+  min-width:72px;
+
+  background:#ffffff;
+
+  border-radius:50%;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  overflow:hidden;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+
+  transition:0.3s ease;
+}
+
+.portal-logo img{
+  width:46px;
+  height:46px;
+
+  object-fit:contain;
+}
+
+.portal-link:hover .portal-logo{
+  transform:scale(1.08);
+}
+
+/* =========================
+   PORTAL INFO
+========================= */
+
+.portal-info{
+  flex:1;
+}
+
+.portal-info h4{
+  color:#033814;
+
+  font-size:1.05rem;
+  font-weight:700;
+
+  margin-bottom:4px;
+
+  transition:0.3s ease;
+}
+
+.portal-info p{
+  color:#555555;
+
+  font-size:0.9rem;
+
+  margin:0;
+
+  line-height:1.4;
+
+  transition:0.3s ease;
+}
+
+/* =========================
+   HOVER TEXT
+========================= */
+
+.portal-link:hover .portal-info h4,
+.portal-link:hover .portal-info p{
+  color:#ffffff;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+  .portal-container{
+    width:100%;
+
+    min-width:100%;
+
+    max-height:none;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .portal-container{
+    border-radius:20px;
+
+    padding:20px 18px;
+  }
+
+  .portal-title{
+    font-size:1.7rem;
+
+    margin-bottom:20px;
+  }
+
+  .portal-link{
+    padding:14px;
+
+    gap:14px;
+  }
+
+  .portal-logo{
+    width:62px;
+    height:62px;
+
+    min-width:62px;
+  }
+
+  .portal-logo img{
+    width:38px;
+    height:38px;
+  }
+
+  .portal-info h4{
+    font-size:0.98rem;
+  }
+
+  .portal-info p{
+    font-size:0.82rem;
+  }
+
+}
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-titles{
+  display:flex;
+
+  gap:30px;
+
+  width:100%;
+
+  margin:10px 0 30px;
+}
+
+.admission-title,
+.facilities-title{
+  width:calc(50% - 15px);
+
+  background:#033814;
+  color:white;
+
+  text-align:center;
+
+  font-size:2.2rem;
+  font-weight:bold;
+
+  letter-spacing:1px;
+
+  padding:18px 25px;
+
+  border-radius:16px;
+
+  margin:0;
+
+  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   ADMISSION + FACILITIES
+========================= */
+
+.admission-calendar-wrapper{
+  display:flex;
+
+  align-items:flex-start;
+
+  gap:30px;
+
+  width:100%;
+}
+
+/* LEFT SIDE */
+
+.admission-container{
+  flex:1;
+
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:30px;
+
+  justify-content:center;
+  align-content:flex-start;
+}
+
+/* RIGHT SIDE */
+
+.facilities-wrapper{
+  flex:1;
+
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:30px;
+
+  align-content:flex-start;
+}
+
+/* =========================
+   ADMISSION CARD
+========================= */
+
+.admission-card{
+  width:calc(50% - 15px);
+
+  background:white;
+
+  border-radius:20px;
+  overflow:hidden;
+
+  border:1px solid rgba(0,0,0,0.05);
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.18);
+
+  transition:0.3s ease;
+}
+
+.admission-card:hover{
+  transform:translateY(-8px);
+
+  box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+/* IMAGE */
+
+.img-wrapper{
+  position:relative;
+
+  overflow:hidden;
+}
+
+.img-wrapper img{
+  width:100%;
+  height:280px;
+
+  object-fit:cover;
+
+  transition:0.4s ease;
+}
+
+.admission-card:hover img{
+  transform:scale(1.05);
+}
+
+/* BUTTON */
+
+.read-more-btn{
+  position:absolute;
+
+  bottom:15px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  background:#033814;
+  color:white;
+
+  padding:12px 24px;
+
+  border-radius:30px;
+
+  text-decoration:none;
+
+  font-size:0.95rem;
+  font-weight:bold;
+
+  transition:0.3s ease;
+}
+
+.read-more-btn:hover{
+  background:#e0b883;
+  color:#032c10;
+}
+
+/* TEXT */
+
+.admission-card p{
+  padding:22px;
+
+  font-size:1rem;
+  font-weight:bold;
+
+  text-align:center;
+
+  color:#033814;
+}
+
+/* =========================
+   FACILITY CARD
+========================= */
+
+.facility-card{
+  width:calc(33.333% - 20px);
+  height:365px;
+
+  background:white;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  text-align:center;
+
+  padding-bottom:20px;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.18);
+
+  transition:0.3s ease;
+}
+
+.facility-card:hover{
+  transform:translateY(-6px);
+
+  box-shadow:0 15px 30px rgba(0,0,0,0.25);
+}
+
+.facility-img img{
+  width:100%;
+  height:220px;
+
+  object-fit:cover;
+
+  transition:0.4s ease;
+}
+
+.facility-card:hover .facility-img img{
+  transform:scale(1.05);
+}
+
+.facility-card h4{
+  margin:20px 0 15px;
+
+  font-size:1.3rem;
+
+  color:#033814;
+}
+
+.facility-btn{
+  display:inline-block;
+
+  background:#033814;
+  color:white;
+
+  padding:12px 24px;
+
+  border-radius:30px;
+
+  text-decoration:none;
+
+  font-weight:bold;
+
+  transition:0.3s ease;
+}
+
+.facility-btn:hover{
+  background:#e0b883;
+
+  color:#032c10;
+}
+
+/* =========================
+   NEWS + CALENDAR
+========================= */
+.section-titles{
+  display:flex;
+  gap:30px;
+
+  width:100%;
+  margin:10px 0 30px 0;
+}
+
+
+/* =========================
+   UNIVERSITY NEWS TITLE
+========================= */
+
+.news-title-wrapper{
+  width:calc(100% - 390px);
+
+  margin:50px 0 25px;
+
+  display:flex;
+  align-items:center;
+}
+
+.news-title{
+  width:100%;
+
+  background:#033814;
+  color:#ffffff;
+
+  margin:0;
+
+  padding:18px 25px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  font-size:2rem;
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   NEWS + CALENDAR WRAPPER
+========================= */
+
+.news-calendar-wrapper{
+  width:100%;
+
+  display:flex;
+  align-items:flex-start;
+
+  gap:30px;
+}
+
+/* =========================
+   NEWS CONTAINER
+========================= */
+
+.news-container{
+  flex:1;
+
+  display:flex;
+  gap:25px;
+}
+
+/* =========================
+   NEWS CARD
+========================= */
+
+.news-card{
+  flex:1;
+
+  background:#ffffff;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+
+  transition:0.3s ease;
+}
+
+.news-card:hover{
+  transform:translateY(-5px);
+
+  box-shadow:0 14px 28px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   NEWS IMAGE
+========================= */
+
+.news-img{
+  position:relative;
+
+  overflow:hidden;
+}
+
+.news-img img{
+  width:100%;
+  height:240px;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:0.4s ease;
+}
+
+.news-card:hover .news-img img{
+  transform:scale(1.05);
+}
+
+/* =========================
+   NEWS TEXT
+========================= */
+
+.news-card p{
+  margin:0;
+
+  padding:22px 18px;
+
+  text-align:center;
+
+  font-size:0.95rem;
+  font-weight:700;
+
+  line-height:1.6;
+
+  color:#033814;
+}
+
+/* =========================
+   SCHOOL CALENDAR
+========================= */
+
+.school-calendar{
+  width:360px;
+
+  flex-shrink:0;
+
+  background:#ffffff;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  margin-top: -103px;
+}
+
+/* =========================
+   CALENDAR HEADER
+========================= */
+
+.calendar-header{
+  background:#033814;
+  color:#ffffff;
+
+  padding:24px;
+}
+
+.calendar-header h3{
+  margin:0 0 6px;
+
+  font-size:1.8rem;
+  font-weight:700;
+}
+
+.calendar-header span{
+  font-size:0.95rem;
+
+  opacity:0.9;
+}
+
+/* =========================
+   CALENDAR EVENTS
+========================= */
+
+.calendar-events{
+  padding:20px;
+}
+
+.calendar-event{
+  display:flex;
+  align-items:flex-start;
+
+  gap:16px;
+
+  padding:18px 0;
+
+  border-bottom:1px solid #e5e5e5;
+
+  transition:0.3s ease;
+}
+
+.calendar-event:last-child{
+  border-bottom:none;
+}
+
+.calendar-event:hover{
+  transform:translateX(5px);
+}
+
+/* =========================
+   EVENT DATE
+========================= */
+
+.event-date{
+  width:76px;
+  height:76px;
+
+  background:#15803d;
+  color:#ffffff;
+
+  border-radius:16px;
+
+  display:flex;
+  flex-direction:column;
+
+  justify-content:center;
+  align-items:center;
+
+  flex-shrink:0;
+
+  box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.month{
+  font-size:12px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+}
+
+.day{
+  font-size:30px;
+
+  font-weight:700;
+
+  line-height:1;
+}
+
+/* =========================
+   EVENT INFO
+========================= */
+
+.event-info h4{
+  margin:0;
+
+  font-size:1rem;
+  font-weight:700;
+
+  color:#033814;
+}
+
+.event-info p{
+  margin-top:6px;
+
+  font-size:0.9rem;
+
+  line-height:1.5;
+
+  color:#666666;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+  .news-calendar-wrapper{
+    flex-direction:column;
+  }
+
+  .news-title-wrapper{
+    width:100%;
+  }
+
+  .school-calendar{
+    width:100%;
+  }
+
+}
+
+@media(max-width:992px){
+
+  .news-container{
+    flex-wrap:wrap;
+  }
+
+  .news-card{
+    min-width:calc(50% - 13px);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .news-title{
+    font-size:1.5rem;
+
+    padding:15px 20px;
+  }
+
+  .news-container{
+    flex-direction:column;
+  }
+
+  .news-card{
+    width:100%;
+  }
+
+  .news-img img{
+    height:220px;
+  }
+
+  .school-calendar{
+    width:100%;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .news-title{
+    font-size:1.3rem;
+  }
+
+  .calendar-header h3{
+    font-size:1.5rem;
+  }
+
+  .calendar-event{
+    gap:12px;
+  }
+
+  .event-date{
+    width:68px;
+    height:68px;
+  }
+
+  .day{
+    font-size:26px;
+  }
+
+}
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+  .top-section{
+    flex-direction:column;
+  }
+
+  .portal-container{
+    width:100%;
+    height:auto;
+  }
+
+  .carousel{
+    width:100%;
+  }
+  
+  .news-calendar-wrapper{
+    flex-direction:column;
+  }
+
+    .news-container{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .school-calendar{
+    width:100%;
+  }
+
+
+
+  .admission-calendar-wrapper,
+  .news-calendar-wrapper{
+    flex-direction:column;
+  }
+
+  .admission-container,
+  .facilities-wrapper,
+  .news-container{
+    width:100%;
+  }
+
+  .facility-card{
+    width:calc(50% - 15px);
+  }
+
+  .school-calendar{
+    width:100%;
+  }
+}
+
+@media(max-width:768px){
+
+  .news-container{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:768px){
+
+  .hero{
+    padding:20px;
+  }
+
+  .school-title{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .navbar{
+    margin-top:10px;
+
+    flex-wrap:wrap;
+  }
+
+  .navbar a{
+    margin:5px 10px 0 0;
+  }
+
+  .admission-card,
+  .facility-card,
+  .news-card{
+    width:100%;
+  }
+
+  .top-header{
+    padding:15px;
+  }
+
+  .school-title h1{
+    font-size:1.5rem;
+  }
+
+  .section-titles{
+    flex-direction:column;
+  }
+
+  .admission-title,
+  .facilities-title{
+    width:100%;
+
+    font-size:1.6rem;
+
+    padding:15px 20px;
+  }
+}

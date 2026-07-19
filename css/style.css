@@ -1,0 +1,780 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:#ecedec;
+  overflow-x:hidden;
+}
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.main-container{
+  width:100%;
+  padding:35px 40px 60px;
+  background:#ecedec;
+}
+
+.hero{
+  width:100%;
+}
+
+.hero-content{
+  width:100%;
+}
+
+/* =========================================================
+   TOP SECTION
+========================================================= */
+
+.top-section{
+  width:100%;
+  display:flex;
+  align-items:flex-start;
+  gap:30px;
+}
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.carousel{
+  flex:1;
+  border-radius:24px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 10px 30px rgba(0,0,0,0.18);
+}
+
+.carousel-inner{
+  border-radius:24px;
+}
+
+.carousel-item img{
+  width:100%;
+  height:560px;
+  object-fit:cover;
+  transition:0.4s ease;
+}
+
+.carousel:hover .carousel-item img{
+  transform:scale(1.02);
+}
+
+/* =========================================================
+   CAROUSEL CONTROLS
+========================================================= */
+
+.carousel-control-prev,
+.carousel-control-next{
+  width:8%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  width:3rem;
+  height:3rem;
+  border-radius:50%;
+  background-color:rgba(0,0,0,0.35);
+  padding:25px;
+  backdrop-filter:blur(4px);
+}
+
+/* =========================================================
+   CAROUSEL INDICATORS
+========================================================= */
+
+.carousel-indicators{
+  margin-bottom:18px;
+}
+
+.carousel-indicators button{
+  width:12px !important;
+  height:12px !important;
+  border-radius:50%;
+  border:none !important;
+  background:#fff !important;
+  opacity:0.5;
+}
+
+.carousel-indicators .active{
+  opacity:1;
+  transform:scale(1.15);
+}
+
+/* =========================================================
+   PORTAL CONTAINER
+========================================================= */
+
+.portal-container{
+  width:360px;
+  min-width:360px;
+  max-height:560px;
+  background:linear-gradient(180deg,#033814,#055122);
+  border-radius:24px;
+  padding:25px 22px;
+  overflow-y:auto;
+  box-shadow:0 10px 30px rgba(0,0,0,0.20);
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.portal-container::-webkit-scrollbar{
+  width:8px;
+}
+
+.portal-container::-webkit-scrollbar-thumb{
+  background:rgba(255,255,255,0.25);
+  border-radius:20px;
+}
+
+/* =========================================================
+   PORTAL TITLE
+========================================================= */
+
+.portal-title{
+  color:#fff;
+  text-align:center;
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:25px;
+  letter-spacing:1px;
+}
+
+/* =========================================================
+   PORTAL LINKS
+========================================================= */
+
+.portal-link{
+  width:100%;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  text-decoration:none;
+  background:#fff;
+  border-radius:18px;
+  padding:16px;
+  margin-bottom:18px;
+  transition:0.3s ease;
+  box-shadow:0 6px 16px rgba(0,0,0,0.10);
+}
+
+.portal-link:hover{
+  background:#2fa85a;
+  transform:translateY(-4px);
+}
+
+.portal-logo{
+  width:72px;
+  height:72px;
+  min-width:72px;
+  border-radius:50%;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#fff;
+  transition:0.3s ease;
+}
+
+.portal-logo img{
+  width:46px;
+  height:46px;
+  object-fit:contain;
+}
+
+.portal-link:hover .portal-logo{
+  transform:scale(1.08);
+}
+
+.portal-info{
+  flex:1;
+}
+
+.portal-info h4{
+  color:#033814;
+  font-size:1.05rem;
+  font-weight:700;
+  margin-bottom:5px;
+}
+
+.portal-info p{
+  color:#666;
+  font-size:0.9rem;
+  margin:0;
+}
+
+.portal-link:hover .portal-info h4,
+.portal-link:hover .portal-info p{
+  color:#fff;
+}
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.section-titles{
+  width:100%;
+  display:flex;
+  gap:30px;
+  margin:40px 0 30px;
+}
+
+.admission-title,
+.facilities-title{
+  width:calc(50% - 15px);
+  background:#033814;
+  color:#fff;
+  text-align:center;
+  font-size:2rem;
+  font-weight:700;
+  padding:18px 25px;
+  border-radius:18px;
+  box-shadow:0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* =========================================================
+   ADMISSION + FACILITIES
+========================================================= */
+
+.admission-calendar-wrapper{
+  width:100%;
+  display:flex;
+  gap:30px;
+}
+
+/* =========================================================
+   ADMISSION CONTAINER
+========================================================= */
+
+.admission-container{
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:30px;
+  align-content:start;
+}
+
+.admission-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  transition:0.3s ease;
+}
+
+.admission-card:hover{
+  transform:translateY(-8px);
+}
+
+.img-wrapper{
+  position:relative;
+  overflow:hidden;
+}
+
+.img-wrapper img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  transition:0.4s ease;
+}
+
+.admission-card:hover img{
+  transform:scale(1.05);
+}
+
+.read-more-btn{
+  position:absolute;
+  bottom:15px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#033814;
+  color:#fff;
+  padding:12px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.3s ease;
+}
+
+.read-more-btn:hover{
+  background:#e0b883;
+  color:#032c10;
+}
+
+.admission-card p{
+  padding:22px;
+  text-align:center;
+  font-weight:700;
+  color:#033814;
+}
+
+/* =========================================================
+   FACILITIES
+========================================================= */
+
+.facilities-wrapper{
+  flex:1;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  align-content:start;
+}
+
+.facility-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  text-align:center;
+  padding-bottom:20px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  transition:0.3s ease;
+  min-height: 365px;
+}
+
+.facility-card:hover{
+  transform:translateY(-6px);
+}
+
+.facility-img{
+  overflow:hidden;
+}
+
+.facility-img img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  transition:0.4s ease;
+}
+
+.facility-card:hover .facility-img img{
+  transform:scale(1.05);
+}
+
+.facility-card h4{
+  margin:20px 0 15px;
+  font-size:1.2rem;
+  color:#033814;
+}
+
+.facility-btn{
+  display:inline-block;
+  background:#033814;
+  color:#fff;
+  padding:12px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.3s ease;
+}
+
+.facility-btn:hover{
+  background:#e0b883;
+  color:#032c10;
+}
+
+/* =========================================================
+   UNIVERSITY NEWS TITLE
+========================================================= */
+
+.news-title-wrapper{
+  width:calc(100% - 390px);
+  margin:60px 0 25px;
+}
+
+.news-title{
+  width:100%;
+  background:#033814;
+  color:#fff;
+  text-align:center;
+  padding:18px 25px;
+  border-radius:20px;
+  font-size:2rem;
+  font-weight:700;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================================================
+   NEWS + CALENDAR
+========================================================= */
+
+.news-calendar-wrapper{
+  width:100%;
+  display:flex;
+  gap:30px;
+  align-items:flex-start;
+}
+
+.news-container{
+  flex:1;
+
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+
+  gap:25px;
+
+  align-content:start;
+}
+
+.news-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  transition:0.3s ease;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  display:flex;
+  flex-direction:column;
+  height:370px;
+}
+.news-card:hover{
+  transform:translateY(-6px);
+}
+
+.news-img{
+  position:relative;
+  overflow:hidden;
+}
+
+.news-img img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  transition:0.4s ease;
+}
+
+.news-card:hover .news-img img{
+  transform:scale(1.05);
+}
+
+.news-card p{
+  padding:22px 18px;
+  text-align:center;
+  font-weight:700;
+  line-height:1.6;
+  color:#033814;
+  height:140px;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+/* =========================================================
+   SCHOOL CALENDAR
+========================================================= */
+
+.school-calendar{
+  width:360px;
+  flex-shrink:0;
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  margin-top:-103px;
+  height:475px;
+  display:flex;
+  flex-direction:column;
+}
+.calendar-header{
+  background:#033814;
+  color:#fff;
+  padding:24px;
+}
+
+.calendar-header h3{
+  font-size:1.8rem;
+  margin-bottom:6px;
+}
+
+.calendar-events{
+  flex:1;
+  padding:20px;
+  overflow-y:auto;
+}
+
+.calendar-event{
+  display:flex;
+  gap:16px;
+  padding:18px 0;
+  border-bottom:1px solid #e5e5e5;
+  transition:.3s ease;
+  align-items:flex-start;
+}
+
+.calendar-event:last-child{
+  border-bottom:none;
+}
+
+.calendar-event:hover{
+  transform:translateX(5px);
+}
+
+.event-date{
+  width:76px;
+  height:76px;
+  min-width:76px;
+  background:#15803d;
+  color:#fff;
+  border-radius:16px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.month{
+  font-size:12px;
+  font-weight:700;
+}
+
+.day{
+  font-size:30px;
+  font-weight:700;
+}
+
+.event-info h4{
+  color:#033814;
+  font-size:1rem;
+  margin-bottom:5px;
+  line-height:1.4;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+}
+
+.event-info{
+  flex:1;
+  min-width:0;
+}
+
+.event-info p{
+  color:#666;
+  font-size:0.9rem;
+  line-height:1.5;
+  word-wrap:break-word;
+}
+
+.calendar-events::-webkit-scrollbar{
+  width:8px;
+}
+
+.calendar-events::-webkit-scrollbar-track{
+  background:#f1f1f1;
+}
+
+.calendar-events::-webkit-scrollbar-thumb{
+  background:#15803d;
+  border-radius:20px;
+}
+
+.calendar-events::-webkit-scrollbar-thumb:hover{
+  background:#0d5f2b;
+}
+
+/* =========================================================
+   COMMUNITY AND EXTENSION SERVICES
+========================================================= */
+
+.community-title-wrapper{
+  width:100%;
+  margin:60px 0 25px;
+}
+
+.community-title{
+  width:100%;
+  background:#033814;
+  color:#fff;
+  text-align:center;
+  padding:18px 25px;
+  border-radius:20px;
+  font-size:2rem;
+  font-weight:700;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.community-wrapper{
+  width:100%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.community-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  transition:0.3s ease;
+}
+
+.community-card:hover{
+  transform:translateY(-6px);
+}
+
+.community-img{
+  overflow:hidden;
+}
+
+.community-img img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  transition:0.4s ease;
+}
+
+.community-card:hover .community-img img{
+  transform:scale(1.05);
+}
+
+.community-content{
+  padding:25px;
+  text-align:center;
+}
+
+.community-content h4{
+  color:#033814;
+  font-size:1.4rem;
+  margin-bottom:15px;
+}
+
+.community-content p{
+  color:#666;
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+.community-btn{
+  display:inline-block;
+  background:#033814;
+  color:#fff;
+  padding:12px 24px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.3s ease;
+}
+
+.community-btn:hover{
+  background:#e0b883;
+  color:#032c10;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px){
+
+  .top-section,
+  .admission-calendar-wrapper,
+  .news-calendar-wrapper{
+    flex-direction:column;
+  }
+
+  .portal-container,
+  .carousel,
+  .school-calendar,
+  .news-title-wrapper{
+    width:100%;
+    max-width:100%;
+  }
+
+  .facility-card{
+    width:calc(50% - 15px);
+  }
+
+  .community-wrapper{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:992px){
+
+  .news-container{
+    flex-wrap:wrap;
+  }
+
+  .news-card{
+    min-width:calc(50% - 13px);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .main-container{
+    padding:20px 15px 40px;
+  }
+
+  .section-titles{
+    flex-direction:column;
+  }
+
+  .admission-title,
+  .facilities-title{
+    width:100%;
+    font-size:1.5rem;
+  }
+
+  .admission-card,
+  .facility-card,
+  .news-card{
+    width:100%;
+  }
+
+  .news-container{
+    flex-direction:column;
+  }
+
+  .community-wrapper{
+    grid-template-columns:1fr;
+  }
+
+  .carousel-item img{
+    height:260px;
+  }
+
+  .school-calendar{
+    margin-top:0;
+    width:100%;
+  }
+
+  .news-title,
+  .community-title{
+    font-size:1.5rem;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .portal-title{
+    font-size:1.5rem;
+  }
+
+  .calendar-header h3{
+    font-size:1.4rem;
+  }
+
+  .event-date{
+    width:65px;
+    height:65px;
+  }
+
+  .day{
+    font-size:24px;
+  }
+
+}

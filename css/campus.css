@@ -1,0 +1,279 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#eaf5ee,#f6fbf7);
+  color:#1d3b25;
+  overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND GLOW EFFECT
+========================= */
+body::before,
+body::after{
+  content:'';
+  position:fixed;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  filter:blur(80px);
+  z-index:-1;
+}
+
+body::before{
+  top:-150px;
+  left:-150px;
+  background:rgba(4,77,23,0.10);
+}
+
+body::after{
+  bottom:-150px;
+  right:-150px;
+  background:rgba(4,77,23,0.08);
+}
+
+/* =========================
+   HEADER
+========================= */
+.header{
+  text-align:center;
+  padding:45px 20px 25px;
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+/* =========================
+   🎓 ANIMATED ACADEMIC TITLE
+========================= */
+.header h1{
+  font-size:2.9rem;
+  font-weight:900;
+  letter-spacing:3px;
+
+  text-transform:uppercase;
+
+  display:inline-block;
+  position:relative;
+
+  background:linear-gradient(90deg,#063d1a,#0a6b25,#063d1a);
+  background-size:200% auto;
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  animation:academicGlow 4s linear infinite;
+}
+
+/* shine sweep */
+.header h1::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:120%;
+  height:100%;
+
+  background:linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+
+  transform:skewX(-20deg);
+
+  animation:titleShine 3.5s infinite;
+}
+
+/* underline animation */
+.header h1::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:-8px;
+  transform:translateX(-50%);
+
+  width:0%;
+  height:3px;
+
+  background:#044d17;
+  border-radius:5px;
+
+  animation:underlineGrow 1.2s ease forwards;
+}
+
+.header p{
+  margin-top:6px;
+  font-size:1rem;
+  color:#3b5f45;
+}
+
+/* =========================
+   GRID LAYOUT
+========================= */
+.container{
+  width:100%;
+  padding:30px 50px 60px;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:22px;
+}
+
+/* =========================
+   CAMPUS CARD
+========================= */
+.card{
+  background:white;
+  border-radius:16px;
+  overflow:hidden;
+
+  box-shadow:0 8px 18px rgba(0,0,0,0.10);
+
+  transition:0.3s ease;
+
+  display:flex;
+  flex-direction:column;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 28px rgba(0,0,0,0.18);
+}
+
+/* =========================
+   IMAGE
+========================= */
+.card img{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+}
+
+/* =========================
+   CONTENT
+========================= */
+.card-content{
+  padding:18px 20px 20px;
+}
+
+/* TITLE INSIDE CARD */
+.card h2{
+  font-size:1.25rem;
+  font-weight:800;
+  color:#063d1a;
+
+  margin-bottom:10px;
+
+  display:block;
+  padding-bottom:8px;
+  border-bottom:2px solid rgba(4,77,23,0.15);
+}
+
+/* =========================
+   INFO TEXT
+========================= */
+.info{
+  font-size:0.92rem;
+  margin-bottom:10px;
+  color:#2f3d33;
+  line-height:1.4;
+}
+
+.label{
+  font-weight:700;
+  color:#044d17;
+}
+
+/* =========================
+   CONTACT BOX
+========================= */
+.contact{
+  margin-top:10px;
+  padding:10px 12px;
+
+  background:#f3faf5;
+  border-left:4px solid #044d17;
+  border-radius:8px;
+
+  font-size:0.88rem;
+  color:#2b3a31;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:8px 14px;
+
+  background:#044d17;
+  color:white;
+
+  border-radius:8px;
+  text-decoration:none;
+
+  font-size:0.82rem;
+  font-weight:600;
+
+  transition:0.3s ease;
+}
+
+.btn:hover{
+  background:#066b22;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media(max-width:900px){
+  .container{
+    padding:20px;
+    grid-template-columns:1fr;
+  }
+
+  .header h1{
+    font-size:2.2rem;
+  }
+}
+
+/* =========================
+   KEYFRAMES
+========================= */
+@keyframes academicGlow{
+  0%{
+    background-position:0% center;
+  }
+  100%{
+    background-position:200% center;
+  }
+}
+
+@keyframes titleShine{
+  0%{
+    left:-120%;
+  }
+  100%{
+    left:120%;
+  }
+}
+
+@keyframes underlineGrow{
+  from{
+    width:0%;
+  }
+  to{
+    width:60%;
+  }
+}

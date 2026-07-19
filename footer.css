@@ -1,0 +1,64 @@
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+  background:linear-gradient(to right,#032c10,#0b5d2a);
+  color:white;
+  margin-top:60px;
+  padding-top:50px;
+}
+
+/* CONTAINER */
+.footer-container{
+  display:flex;
+  justify-content:space-between;
+  gap:40px;
+  padding:0 60px 40px;
+  flex-wrap:wrap;
+}
+
+/* COLUMNS */
+.footer-col{
+  flex:1;
+  min-width:250px;
+}
+
+.footer-col h3{
+  font-size:1.3rem;
+  margin-bottom:15px;
+  color:#e0b883;
+}
+
+/* TEXT */
+.footer-col p{
+  font-size:0.95rem;
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+/* LINKS */
+.footer-col a{
+  display:block;
+  color:white;
+  text-decoration:none;
+
+  margin-bottom:8px;
+  font-size:0.95rem;
+
+  transition:0.3s ease;
+}
+
+.footer-col a:hover{
+  color:#e0b883;
+  padding-left:6px;
+}
+
+/* BOTTOM BAR */
+.footer-bottom{
+  text-align:center;
+  padding:15px;
+  border-top:1px solid rgba(255,255,255,0.15);
+  font-size:0.85rem;
+  opacity:0.8;
+}

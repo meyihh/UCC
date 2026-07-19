@@ -1,0 +1,212 @@
+/* =========================
+   RESET (optional safety)
+========================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.top-header{
+  width:100%;
+  background:linear-gradient(to right,#032c10,#2fa85a);
+  color:white;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:15px 40px;
+
+  position:sticky;
+  top:0;
+  z-index:3000;
+}
+
+/* =========================
+   LOGOS
+========================= */
+
+.logo-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo-box img{
+  width:75px;
+  height:75px;
+  object-fit:contain;
+}
+
+.multi-logo img{
+  width:60px;
+  height:60px;
+}
+
+/* =========================
+   TITLE AREA
+========================= */
+
+.school-title{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  flex:1;
+  margin-left:20px;
+}
+
+.school-title h1{
+  font-size:2rem;
+  font-weight:bold;
+  color:white;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  display:flex;
+  align-items:center;
+
+  margin-left:60px;
+  gap:10px;
+}
+
+/* =========================
+   NAV ITEMS (LINKS + DROPDOWN BUTTONS)
+========================= */
+
+.navbar a,
+.dropbtn{
+  color:white;
+  text-decoration:none;
+
+  font-weight:bold;
+  font-size:1rem;
+
+  display:flex;
+  align-items:center;
+  gap:5px;
+
+  padding:7px 12px;
+  border-radius:6px;
+
+  transition:0.25s ease;
+  position:relative;
+
+  cursor:pointer;
+}
+
+/* hover effect (ALL NAV ITEMS UNIFIED) */
+.navbar a:hover,
+.dropbtn:hover{
+  color:#e0b883;
+  background:rgba(255,255,255,0.08);
+  transform:translateY(-2px);
+}
+
+/* =========================
+   DROPDOWN WRAPPER
+========================= */
+
+.nav-dropdown{
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+/* arrow animation */
+.arrow{
+  font-size:0.8rem;
+  transition:0.3s ease;
+}
+
+/* rotate arrow when active */
+.nav-dropdown.active .arrow{
+  transform:rotate(180deg);
+}
+
+/* =========================
+   DROPDOWN MENU
+========================= */
+
+.dropdown-content{
+  position:absolute;
+  top:100%;
+  left:0;
+
+  min-width:240px;
+
+  margin-top:10px;
+
+  background:linear-gradient(135deg, #0b5d2a, #1f8f4a);
+  border-radius:12px;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+
+  overflow:hidden;
+
+  opacity:0;
+  transform:translateY(-10px);
+  pointer-events:none;
+
+  transition:0.25s ease;
+
+  z-index:9999;
+}
+
+/* show dropdown */
+.nav-dropdown.active .dropdown-content{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+
+/* =========================
+   DROPDOWN ITEMS
+========================= */
+
+.dropdown-content a{
+  display:block;
+
+  padding:12px 15px;
+  margin:0;
+
+  color:white;
+  text-decoration:none;
+
+  font-weight:600;
+
+  border-bottom:1px solid rgba(255,255,255,0.1);
+
+  transition:0.25s ease;
+}
+
+/* last item clean border */
+.dropdown-content a:last-child{
+  border-bottom:none;
+}
+
+/* hover inside dropdown */
+.dropdown-content a:hover{
+  background:rgba(255,255,255,0.15);
+  padding-left:20px;
+}
+
+/* =========================
+   ACCESSIBILITY IMPROVEMENT
+========================= */
+
+.navbar a:focus,
+.dropbtn:focus{
+  outline:2px solid #e0b883;
+  outline-offset:2px;
+}
